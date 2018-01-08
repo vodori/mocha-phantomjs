@@ -1,0 +1,40 @@
+{
+  "name"        : "mocha-phantomjs",
+  "description" : "PhantomJS Runners for Mocha",
+  "keywords"    : ["phantomjs", "mocha", "test", "runner", "command line", "browser"],
+  "version"     : "3.3.1",
+  "author"      : "Ken Collins <ken@metaskills.net> (http://metaskills.net/)",
+  "licenses"    : [{
+    "type" : "MIT",
+    "url"  : "http://github.com/metaskills/mocha-phantomjs/blob/master/MIT-LICENSE"
+  }
+  ],
+  "contributors" : [
+    "Jonathan Chapman <chafnan@gmail.com> (https://github.com/chafnan)",
+    "Nathan Black <nathan@nathanblack.org> (https://github.com/nathanboktae)"
+  ],
+  "repository" : {
+    "type" : "git",
+    "url"  : "http://github.com/metaskills/mocha-phantomjs.git"
+  },
+  "bugs" : {
+    "url": "http://github.com/metaskills/mocha-phantomjs/issues"
+  },
+  "main" : "./lib/mocha-phantomjs.coffee",
+  "bin"  : {
+    "mocha-phantomjs" : "./bin/mocha-phantomjs"
+  },
+  "scripts" : {
+    "test" : "mocha --compilers coffee:coffee-script test/mocha-phantomjs.coffee -t 20000 -R spec"
+  },
+  "dependencies" : {
+    "mocha"     : "1.13.x",
+    "commander" : "1.2.x",
+    "which"     : "~1.0.5"
+  },
+  "devDependencies" : {
+    "chai"          : "1.8.x",
+    "coffee-script" : "1.6.x",
+    "requirejs"     : "2.1.x"
+  }
+}
